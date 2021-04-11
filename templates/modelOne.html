@@ -1,0 +1,87 @@
+<link rel="stylesheet" type="text/css" href="static/CSS/modelOne.css">
+<div class="oneModel ">
+  <div class="model-container">
+	 <div class="input-container">
+	   <form method="POST" action="/modelOne">
+  	   <br>
+  	   <label>Enter the link:</label>
+  	   <br>
+  	   <input type="url" name="url_link" >
+  	   <br>
+  	   <br>
+  	   <label>Paste the text:</label>
+  	   <br>
+  	   <textarea name ="raw_text" rows="4" cols="30"></textarea>
+  	   <br>
+  	   <br>
+  	   <label for="model">Choose a model:</label>
+  	   <select name="model" id="model">
+          <option value="TextRank">TextRank</option>
+        	<option value="Luhn">luhn</option>
+          <option value="LSA">LSA</option>    	
+        	<option value="Embeding">Embedding</option>
+        	<option value="fuzzy">Feature Based</option>
+          <option value="seq2seq"><del>seq2seq</del></option>
+          <option value="own"><del>own</del></option>
+  	   </select>
+
+  	   <button name="pera"><i class="fas fa-cogs"></i></button>
+  	   <br>
+  	   <input type="submit" name="Submit">
+	   </form>
+	 </div>
+</div>
+
+  <div class="model-container2">
+    <div class="orginal boxflex">
+      <center>
+      <button id="orginal_vi" onclick="changeOtext()"><i id="orginal_i" class="fas fa-angle-down"></i>ORGINAL TEXT</button>
+    </center>
+      <div class="orginal_txt" id="orginal_txt">
+        <span>Reading time:{{otime}}min</span>
+      <p>
+        {{otext}}
+      </p>
+      </div>
+    </div>
+    <div class="summery boxflex">
+      <center>
+      <button id="summery_vi" onclick="changeStext()"><i id="summery_i" class="fas fa-angle-up"></i>SUMMARIZED TEXT</button>
+    </center>
+      <div class="summery_txt" id="summery_txt">
+        <span> Reading time:{{stime}}min</span>
+      <p>
+        {{stext}}
+      </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  function changeOtext(ele){
+    var text = document.getElementById("orginal_txt");
+  if (text.style.display === "none") {
+    text.style.display = "block";
+    document.getElementById('orginal_vi').style.backgroundColor="green";
+    document.getElementById('orginal_i').className="fas fa-angle-up";
+  } else {
+    text.style.display = "none";
+    document.getElementById('orginal_vi').style.backgroundColor="red";
+    document.getElementById('orginal_i').className="fas fa-angle-down";
+  }
+  }
+  function changeStext(ele){
+    var text = document.getElementById("summery_txt");
+  if (text.style.display === "none") {
+    text.style.display = "block";
+    document.getElementById('summery_vi').style.backgroundColor="green";
+    document.getElementById('summery_i').className="fas fa-angle-up";
+  } else {
+    text.style.display = "none";
+    document.getElementById('summery_vi').style.backgroundColor="red";
+    document.getElementById('summery_i').className="fas fa-angle-down";
+  }
+  }
+</script>

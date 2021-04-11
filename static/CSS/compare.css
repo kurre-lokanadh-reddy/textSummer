@@ -1,0 +1,27 @@
+.comparer{
+margin: 0;
+padding: 0;
+}
+
+.comparer .comparer-nav-bar{
+	background-color: #5161ce;
+	width:100%;
+	display: block;
+	border:2px solid red;
+	height: 50px;
+	color:white;
+}
+
+.comparer .comparer-nav-bar ul{
+
+}
+.comparer .comparer-nav-bar li{
+	list-style-type: none;
+	float:left;
+}
+.comparer .comparer-nav-bar li a{
+	padding: 20px;
+}
+.comparer .comparer-nav-bar li a:hover{
+	background-color: red;
+}

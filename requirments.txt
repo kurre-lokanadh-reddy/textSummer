@@ -1,0 +1,13 @@
+beautifulsoup4==4.9.3
+bs4
+numpy==1.19.2
+h5py==2.10.0 
+flask==1.1.2
+keras==2.3.1
+nltk==3.4.4
+urllib3==1.26.3
+tensorflow==2.0.0
+scikit-fuzzy==0.4.2
+scikit-learn==0.24.1
+networkx==2.5.1
+

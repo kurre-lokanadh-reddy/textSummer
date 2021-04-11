@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TUrn baCK</title>
+
+    <!--for nav bar-->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- for icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+
+
+    <!-- for nav bar-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="static/CSS/base.css">
+    <link rel="stylesheet" type="text/css" href="static/CSS/footer.css">
+    <script type="text/javascript" src="static/JS/base.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">tEXt Summerizer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item {{ 'active' if contentFile=='home.html' else ''}}">
+                    <a class="nav-link" href="/"><i class="fas fa-igloo"></i>Home</a>
+                </li>
+                <li class="nav-item {{ 'active' if contentFile=='modelOne.html' else ''}}">
+                  <a class="nav-link" href="/modelOne"><i class="far fa-address-book"></i>OneWay</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i><del>Models</del></a>
+                </li>
+                <li class="nav-item {{ 'active' if contentFile=='aboutus.html' else ''}}">
+                    <a class="nav-link" href="/aboutus"><i class="fas fa-user-friends"></i>Aboutus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/examples"><i class="fas fa-question"></i><del>Examples</del></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/documents"><i class="far fa-copy"></i><del>Documents</del></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <!-- content division -->
+    {% include contentFile %}
+    <div class="base-content">
+      {% block content %}{% endblock %}
+    </div>
+
+    <!-- Site footer -->
+    
+    <footer id="fooot" class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Summerize.com <i>UNDERSTANDING WANTS TO BE SIMPLE </i> is an acadamic project done to help the understanding of summerizing of long documents ,in simple. Summerize focuses on providing the most efficient way of summerizing the given text. We used most of the well performing extractive methods along with a-few abstractive methods. The entire end-to-end project is developed in python (nltk,tensorflow,keras) ,flask is used in integration and html,css,js.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="mailto:121710301027@gitam.in">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All the code developed by 
+         <a href="#">Summerize team</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fab fa-github"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fab fa-git"></i></a></li>
+              <li><a class="dribbble" href="mailto:121710301027@gitam.in"><i class="fas fa-envelope"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

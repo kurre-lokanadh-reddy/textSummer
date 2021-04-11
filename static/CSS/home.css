@@ -1,0 +1,15 @@
+.home{
+	text-align: center;
+	padding:40px 30px;
+	color:green;
+}
+.home-col{
+	float:left;
+	width: 45%;
+	height: 60%;
+	padding:10px 30px;
+}
+.sub-intro{
+	background-color: black;
+	display: box;
+}

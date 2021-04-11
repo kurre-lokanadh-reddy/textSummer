@@ -1,0 +1,86 @@
+.oneModel{
+	display: flex;
+	padding :80px;
+	flex-direction: column;
+}
+.oneModel .model-container{
+	justify-content: center;
+	background-color:;
+	margin-top: 40px;
+	display: flex;
+	padding:40px;
+}
+
+.oneModel .input-container{
+	width:70%;
+	justify-content: center;
+	background-color: ;
+}
+.oneModel .input-container input[type=url]{
+	border:none;
+	border-bottom: 2px solid #f2f2f2;
+	width:100%;
+	background-image: url('static/IMG/urlicon.png');
+  	background-position: 10px 10px;
+  	background-repeat: no-repeat;
+  	padding:6px;
+  	text-indent: 7px;
+}
+.oneModel .input-container input[type=url]:focus{
+	border-bottom: 2px solid #5161ce;
+	outline:none;
+}
+.oneModel .input-container textarea{
+	width: 100%;
+	border: 2px solid #f2f2f2;
+}
+.oneModel .input-container textarea:focus{
+	outline: none;
+	border-color:#5161ce;
+	box-shadow: 0px 0px 16px 5px #bfbfbf;
+}
+.oneModel .input-container label{
+	color:black;
+	font-size:smaller;
+	font-size-adjust: 0.2;
+}
+.oneModel .input-container select{
+	cursor: pointer;
+	text-align: center;
+	border:;
+	background-color: ;
+}
+
+.oneModel .model-container .boxflex{
+	display: block;
+	background-color: red;
+	margin:20px;
+	padding:60px;
+	text-align: center;
+	width: 100%;
+}
+.boxflex #orginal_vi{
+width:100%;
+height:30px;
+background-color: red;
+border:3px solid red;
+border-radius: 4px;
+color:white;
+margin-bottom: 3px;
+} 
+.boxflex #summery_vi{
+width:100%;
+height:30px;
+background-color: green;
+border:3px solid green;
+border-radius: 4px;
+color:white;
+}
+.boxflex .orginal_txt {
+	display: none;
+	padding:10px;
+}
+.boxflex .summery_txt{
+	display:block;
+	padding:10px;
+}
