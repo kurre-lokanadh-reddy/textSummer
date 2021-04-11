@@ -10,4 +10,5 @@ tensorflow==2.0.0
 scikit-fuzzy==0.4.2
 scikit-learn==0.24.1
 networkx==2.5.1
+gunicorn
 
