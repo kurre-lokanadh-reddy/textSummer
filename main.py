@@ -88,14 +88,14 @@ def modelOne():
 		modelSelected = request.form.get('model')
 		rawtext = request.form['raw_text']
 		raw_url = request.form['url_link']
-		f=open("logs.txt",'a',encoding="utf-8")
+		#f=open("logs.txt",'a',encoding="utf-8")
 		if rawtext== None or rawtext=="":
 			rawtext = get_text(raw_url)
-		f.write("text==="+rawtext)
+		#f.write("text==="+rawtext)
 		final_reading_time = readingTime(rawtext)
 		final_summary=TS.summerize(modelSelected , rawtext)
 		summary_reading_time = readingTime(final_summary)
-		f.write("\nsummery==="+final_summary+"\n\n\n")
+		#f.write("\nsummery==="+final_summary+"\n\n\n")
 		end = time.time()
 		final_time = end-start
 	return render_template('base.html',contentFile="modelOne.html",otext=rawtext,stext=final_summary,otime=final_reading_time,stime=summary_reading_time)
