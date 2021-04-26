@@ -26,7 +26,7 @@ def readingTime(mytext):
 # Fetch Text From Url
 def get_text(url):
 	page = urlopen(url)
-	soup = BeautifulSoup(page)
+	soup = BeautifulSoup(page,features='lxml')
 	fetched_text = ' '.join(map(lambda p:p.text,soup.find_all('p')))
 	return fetched_text
 

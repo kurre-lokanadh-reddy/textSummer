@@ -653,9 +653,10 @@ def fuzzy_summary (file_name,ABSTRACT_SIZE=0.3,title=False):
     print("after feature calculation ... going into results calculation")
 
     sentence_total_object_result = []
-
+    percent_legth = len(sentences_list)*0.01
     indexCounter = 0
-
+    p_counter =0
+    print("")
     for title_word,sentence_length,sentence_location, numerical_data, thematic_key, proper_noun,sentence_similarity,term_weight in zip(title_word_feature_value, sentence_length_feature_value, sentence_location_feature_value, numerical_data_feature_value, thematic_keyword_feature_value, proper_noun_feature_value,sentence_similarity_feature_value, term_weight_feature_value) : 
     
         # custom
@@ -684,7 +685,11 @@ def fuzzy_summary (file_name,ABSTRACT_SIZE=0.3,title=False):
         fuzzy_list.append(result_object)
         
         indexCounter = indexCounter + 1
-    print("after results vector is done almost done.... \n\t")
+        p_counter = p_counter +1
+        if p_counter>=percent_legth:
+        	p_counter=0
+        	print("#",sep="",end="")
+    print("\nafter results vector is done almost done.... \n\t")
    
     # use 20%  as compression ratio
     total_sentence = len(detected_sentences)
