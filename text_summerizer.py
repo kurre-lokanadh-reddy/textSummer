@@ -97,7 +97,7 @@ def loadEmbeddingMatrix(EMBEDDING_FILE):
     return embeddings_index #, embedding_matrix
 
 ## Loading 'glove' words
-emb_index= loadEmbeddingMatrix('C:/Users/lokanadh/Desktop/Anaconda/text summerization/glove.6B.50d.txt')
+emb_index= loadEmbeddingMatrix('very_large_data/glove.6B.50d.txt')
 
 
 ################################################################################################################################################################################################
