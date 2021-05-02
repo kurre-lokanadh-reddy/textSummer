@@ -322,7 +322,7 @@ def get_sent_embedding(wordlist):
         return np.zeros(50)
     sent_emb=np.mean(sent_emb,axis=0)
     return np.array(sent_emb)
-def Embeding_summary(file_name):
+def Embeding_summary(file_name,ABSTRACT_SIZE=0.30):
     actual , sentences =readarticle_lema(file_name)
     emb_sents=[get_sent_embedding(sent) for sent in sentences]
     sentences=[" ".join(sent) for sent in sentences]
@@ -336,8 +336,9 @@ def Embeding_summary(file_name):
         #print("IDX is: ", idx)
         avg.append(np.mean(idx))
     closest, _ = pairwise_distances_argmin_min(kmeans.cluster_centers_,emb_sents)
+    print(closest)
     ordering = sorted(range(n_clusters), key=lambda k: avg[k])
-    summary = ' '.join([actual[closest[idx]] for idx in ordering])
+    summary = ' '.join([actual[closest[idx]] for idx in ordering[:min(max(2,math.floor(len(actual)*ABSTRACT_SIZE)),n_clusters)]])
     return summary
 
 ######################################################################################################################################
@@ -501,18 +502,18 @@ def OWN_summary(filename,ABSTRACT_SIZE=0.3):
 
 # the below method calls the respective method for summarizaion as per the input given from the flask app.
 
-def summerize(id,text):
+def summerize(id,text,ABSTRACT_SIZE=0.3):
     if id=="TextRank":
-        return TextRank_summary(text);
+        return TextRank_summary(text,ABSTRACT_SIZE);
     elif id=="Luhn":
-        return Luhn_summary(text);
+        return Luhn_summary(text,ABSTRACT_SIZE);
     elif id=="LSA":
-        return LSA_summary(text);
+        return LSA_summary(text,ABSTRACT_SIZE);
     elif id=="Embeding":
-        return Embeding_summary(text);
+        return Embeding_summary(text,ABSTRACT_SIZE);
     elif id=="fuzzy":
-        return fuzzy_summary(text);
+        return fuzzy_summary(text,ABSTRACT_SIZE);
     elif id=="own":
-    	return OWN_summary(text);
+    	return OWN_summary(text,ABSTRACT_SIZE);
     else:
-        return "<h3>THIS MODEL IS CORRENTLY NOT READY </h3>"+TextRank_summary(text);
+        return "<h3>THIS MODEL IS CORRENTLY NOT READY </h3>"+TextRank_summary(text,ABSTRACT_SIZE);
