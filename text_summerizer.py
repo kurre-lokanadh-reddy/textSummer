@@ -118,7 +118,7 @@ def loadEmbeddingHalfs(ad1,ad2):
 	emb.pop('\n')
 	return emb
 
-#emb_index= loadEmbeddingHalfs('very_large_data/glove.6B.50d.1.txt','very_large_data/glove.6B.50d.1.txt')
+emb_index= loadEmbeddingHalfs('very_large_data/glove.6B.50d.1.txt','very_large_data/glove.6B.50d.1.txt')
 
 
 ################################################################################################################################################################################################
