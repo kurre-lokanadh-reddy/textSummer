@@ -306,7 +306,7 @@ def LSA_summary(filename,ABSTRACT_SIZE=0.3):
 
 ## FUZZY logic
 
-from fuzzyLogic.summerize import fuzzy_summary
+#from fuzzyLogic.summerize import fuzzy_summary
 
 
 
@@ -532,8 +532,8 @@ def summerize(id,text,ABSTRACT_SIZE=0.3):
         return LSA_summary(text,ABSTRACT_SIZE);
     elif id=="Embeding":
         return Embeding_summary(text,ABSTRACT_SIZE);
-    elif id=="fuzzy":
-        return fuzzy_summary(text,ABSTRACT_SIZE);
+    #elif id=="fuzzy":
+    #    return fuzzy_summary(text,ABSTRACT_SIZE);
     elif id=="own":
     	return OWN_summary(text,ABSTRACT_SIZE);
     else:
