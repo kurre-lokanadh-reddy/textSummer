@@ -97,7 +97,28 @@ def loadEmbeddingMatrix(EMBEDDING_FILE):
     return embeddings_index #, embedding_matrix
 
 ## Loading 'glove' words
-emb_index= loadEmbeddingMatrix('very_large_data/glove.6B.50d.txt')
+#emb_index= loadEmbeddingMatrix('very_large_data/glove.6B.50d.txt')
+
+
+## for able to upload to github divided glove to two parts code is for loading that
+def loadEmbeddingHalfs(ad1,ad2):
+	f1=open(ad1,'r',encoding='utf-8')
+	emb=dict()
+	for line in f1:
+	    values=line.split(" ")
+	    word = values[0]
+	    emb[word]=np.asarray(values[1:],dtype='float32')
+	f1.close()
+	f2=open(ad2,'r',encoding='utf-8')
+	for line in f2:
+	    values=line.split(" ")
+	    word = values[0]
+	    emb[word]=np.asarray(values[1:],dtype='float32')
+	f2.close()
+	emb.pop('\n')
+	return emb
+
+emb_index= loadEmbeddingHalfs('very_large_data/glove.6B.50d.1.txt','very_large_data/glove.6B.50d.1.txt')
 
 
 ################################################################################################################################################################################################

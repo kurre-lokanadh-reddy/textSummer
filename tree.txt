@@ -1,0 +1,82 @@
+Folder PATH listing
+Volume serial number is 54A2-0BC7
+C:.
+³   .gitattributes
+³   cleaned_CNN.csv
+³   doc.txt
+³   favicon.ico
+³   logs.txt
+³   main.py
+³   nltk.txt
+³   Procfile
+³   README.md
+³   requirements.txt
+³   runtime.txt
+³   text.txt
+³   text_summerizer.ipynb
+³   text_summerizer.py
+³   tree.txt
+³   
+ÃÄÄÄ.ipynb_checkpoints
+³       text_summerizer-checkpoint.ipynb
+³       
+ÃÄÄÄfuzzyLogic
+³   ³   autoCustomRules.py
+³   ³   cosineSimilarity.py
+³   ³   summerize.py
+³   ³   
+³   ÃÄÄÄ.ipynb_checkpoints
+³   ÀÄÄÄ__pycache__
+³           autoCustomRules.cpython-36.pyc
+³           autoCustomRules.cpython-37.pyc
+³           summerize.cpython-36.pyc
+³           summerize.cpython-37.pyc
+³           
+ÃÄÄÄres
+³       Embeding_results.csv
+³       LSA_results.csv
+³       Luhn_results.csv
+³       res_scores.csv
+³       TextRank_results.csv
+³       
+ÃÄÄÄstatic
+³   ÃÄÄÄCSS
+³   ³       aboutus.css
+³   ³       base.css
+³   ³       compare.css
+³   ³       compare.html
+³   ³       footer.css
+³   ³       home.css
+³   ³       modelOne.css
+³   ³       
+³   ÃÄÄÄDOC
+³   ³       doc.pdf
+³   ³       
+³   ÃÄÄÄIMG
+³   ³       favicon.ico
+³   ³       home1.jpeg
+³   ³       home2.jpg
+³   ³       home3.jpg
+³   ³       img1.jpg
+³   ³       textSum.png
+³   ³       urlicon.png
+³   ³       
+³   ÀÄÄÄJS
+³           base.js
+³           
+ÃÄÄÄtemplates
+³       aboutus.html
+³       base.html
+³       documents.html
+³       home.html
+³       home1.html
+³       modelOne.html
+³       
+ÃÄÄÄvery_large_data
+³       .gitattributes
+³       glove.6B.50d.txt
+³       
+ÀÄÄÄ__pycache__
+        text_summerizer.cpython-37.pyc
+        text_summerizer.cpython-38.pyc
+        

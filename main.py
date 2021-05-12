@@ -39,7 +39,7 @@ def tohome2():
 	return render_template("base.html",contentFile="home.html")
 @app.route("/documents")
 def docs():
-	return render_template("base.html",contentFile="docs.html")
+	return render_template("base.html",contentFile="documents.html")
 
 @app.route("/examples")
 def exmp():
@@ -104,4 +104,4 @@ def modelOne():
 
 
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
