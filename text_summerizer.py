@@ -97,7 +97,7 @@ def loadEmbeddingMatrix(EMBEDDING_FILE):
     return embeddings_index #, embedding_matrix
 
 ## Loading 'glove' words
-emb_index= loadEmbeddingMatrix('very_large_data/glove.6B.50d.txt')
+#emb_index= loadEmbeddingMatrix('very_large_data/glove.6B.50d.txt')
 
 
 ## for able to upload to github divided glove to two parts code is for loading that
