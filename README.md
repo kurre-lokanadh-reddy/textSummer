@@ -4,3 +4,6 @@ A python based text sumemrization project which includes 5 state-of-the-art extr
 #A hybrid text summerization model based on the concept of LSA and Embeddings which performs better then the regular LSA when the source text is around more than 1 topic of conversation.
 
 
+This project only uses packages like nltk, numpy to process the background, all the models are done from scratch and if U have any suggestions or improvements feel free to contact me.
+The repo majorProject covers the models that are done using the package like spacy, gensim etc.
+
